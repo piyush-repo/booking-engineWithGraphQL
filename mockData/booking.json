@@ -1,0 +1,37 @@
+[
+    {
+        "bookingId": 1234,
+        "bookingDate": "2021-05-28",
+        "bookingHrs": 2,
+        "customerId": 4,
+        "vin": 12346
+    },
+    {
+        "bookingId": 1235,
+        "bookingDate": "2021-05-29",
+        "bookingHrs": 2,
+        "customerId": 2,
+        "vin": 12345
+    },
+    {
+        "bookingId": 1236,
+        "bookingDate": "2021-05-29",
+        "bookingHrs": 2,
+        "customerId": 2,
+        "vin": 12345
+    },
+    {
+        "bookingId": 1237,
+        "bookingDate": "2021-05-30",
+        "bookingHrs": 2,
+        "customerId": 3,
+        "vin": 12345
+    },
+    {
+        "bookingId": 1238,
+        "bookingDate": "2021-05-31",
+        "bookingHrs": 2,
+        "customerId": 1,
+        "vin": 1234
+    }
+]

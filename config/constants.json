@@ -1,0 +1,9 @@
+{
+    "store": {
+        "openTime": "09:00:00",
+        "closeTime": "17:00:00",
+        "timeZone": ""
+    },
+    "bookingCapacity": 2,
+    "maxBookingDurationInHrs": 2
+}

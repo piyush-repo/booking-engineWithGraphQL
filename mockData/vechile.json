@@ -1,0 +1,92 @@
+[
+    {
+        "Make": "BMW",
+        "Model": "Coupe, Convertible",
+        "Vin": 12345
+    },
+    {
+        "Make": "Audi",
+        "Model": "Wagon, Sedan",
+        "Vin": 1234
+    },
+    {
+        "Make": "Audi",
+        "Model": "Coupe, Convertible",
+        "Vin": 12346
+    },
+    {
+        "Make": "FIAT",
+        "Model": "Convertible",
+        "Vin": 123459
+    },
+    {
+        "Make": "Ram",
+        "Model": "1500 Classic Crew Cab Pickup",
+        "Vin": 1234
+    },
+    {
+        "Make": "GMC",
+        "Model": "1500 Club Coupe Pickup",
+        "Vin": 12346
+    },
+    {
+        "Make": "Chrysler",
+        "Model": "200 Sedan",
+        "Vin": 12346
+    },
+    {
+        "Make": "Nissan",
+        "Model": "240SX Coupe",
+        "Vin": 123459
+    },
+    {
+        "Make": "Volvo",
+        "Model": "240 Sedan, Wagon",
+        "Vin": 1234
+    },
+    {
+        "Make": "Chevrolet",
+        "Model": "1500 Extended Cab",
+        "Vin": 12346
+    },
+    {
+        "Make": "BMW",
+        "Model": "3 Series Sedan, Coupe",
+        "Vin": 12346
+    },
+    {
+        "Make": "Mercedes-Benz",
+        "Model": "300 CE Coupe, Convertible",
+        "Vin": 123459
+    },
+    {
+        "Make": "Saab",
+        "Model": "3-Sep Hatchback, Convertible",
+        "Vin": 1234
+    },
+    {
+        "Make": "Mitsubishi",
+        "Model": "3000GT Hatchback",
+        "Vin": 12346
+    },
+    {
+        "Make": "FIAT",
+        "Model": "500 Abarth Hatchback",
+        "Vin": 12346
+    },
+    {
+        "Make": "Toyota",
+        "Model": "4Runner SUV",
+        "Vin": 123459
+    },
+    {
+        "Make": "Ferrari",
+        "Model": "488 GTB Coupe",
+        "Vin": 1234
+    },
+    {
+        "Make": "MAZDA",
+        "Model": "323 Hatchback",
+        "Vin": 12346
+    }
+]
