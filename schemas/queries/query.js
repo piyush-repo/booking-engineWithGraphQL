@@ -13,6 +13,7 @@ const customerType = require('../customer');
 const vechileType = require('../vechile');
 const bookingType = require('../booking');
 const _ = require('lodash');
+const moment = require('moment');
 
 module.exports = new GraphQLObjectType({
     name: 'RootQueryType',
@@ -52,9 +53,8 @@ module.exports = new GraphQLObjectType({
                 }
                 if (args.bookingDate) {
                     result = result.filter((booking) => {
-                        const date1 = new Date(booking.bookingDate);
-                        const date2 = new Date(args.bookingDate);
-                        return +date1 === +date2;
+                        const bookingDate = moment(booking.bookingDate).format('YYYY-MM-DD');
+                        return moment(args.bookingDate).isBetween(moment(bookingDate).subtract(1, 'days').format('YYYY-MM-DD'), moment(bookingDate).add(1, 'days').format('YYYY-MM-DD'));
                     });
                 }
                 if (args.bookingId) {

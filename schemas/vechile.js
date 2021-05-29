@@ -12,6 +12,6 @@ module.exports = new GraphQLObjectType({
     fields: {
         Make: { type: GraphQLString },
         Model: { type: GraphQLString },
-        Vin: { type: GraphQLInt }
+        Vin: { type: GraphQLID }
     }
 });
