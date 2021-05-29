@@ -2,91 +2,91 @@
     {
         "Make": "BMW",
         "Model": "Coupe, Convertible",
-        "Vin": 12345
+        "Vin": "12345123451234523"
     },
     {
         "Make": "Audi",
         "Model": "Wagon, Sedan",
-        "Vin": 1234
+        "Vin": "1234"
     },
     {
         "Make": "Audi",
         "Model": "Coupe, Convertible",
-        "Vin": 12346
+        "Vin": "42345123451234523"
     },
     {
         "Make": "FIAT",
         "Model": "Convertible",
-        "Vin": 123459
+        "Vin": "123459"
     },
     {
         "Make": "Ram",
         "Model": "1500 Classic Crew Cab Pickup",
-        "Vin": 123490
+        "Vin": "123490"
     },
     {
         "Make": "GMC",
         "Model": "1500 Club Coupe Pickup",
-        "Vin": 123460
+        "Vin": "123460"
     },
     {
         "Make": "Chrysler",
         "Model": "200 Sedan",
-        "Vin": 1234689
+        "Vin": "1234689"
     },
     {
         "Make": "Nissan",
         "Model": "240SX Coupe",
-        "Vin": 12345909
+        "Vin": "12345909"
     },
     {
         "Make": "Volvo",
         "Model": "240 Sedan, Wagon",
-        "Vin": 12345679
+        "Vin": "12345679"
     },
     {
         "Make": "Chevrolet",
         "Model": "1500 Extended Cab",
-        "Vin": 123462354
+        "Vin": "123462354"
     },
     {
         "Make": "BMW",
         "Model": "3 Series Sedan, Coupe",
-        "Vin": 12346456790
+        "Vin": "12346456790"
     },
     {
         "Make": "Mercedes-Benz",
         "Model": "300 CE Coupe, Convertible",
-        "Vin": 1234591234
+        "Vin": "1234591234"
     },
     {
         "Make": "Saab",
         "Model": "3-Sep Hatchback, Convertible",
-        "Vin": 1234123456
+        "Vin": "1234123456"
     },
     {
         "Make": "Mitsubishi",
         "Model": "3000GT Hatchback",
-        "Vin": 12346345234
+        "Vin": "12346345234"
     },
     {
         "Make": "FIAT",
         "Model": "500 Abarth Hatchback",
-        "Vin": 1234609878909
+        "Vin": "1234609878909"
     },
     {
         "Make": "Toyota",
         "Model": "4Runner SUV",
-        "Vin": 12345923189678
+        "Vin": "12345923189678"
     },
     {
         "Make": "Ferrari",
-        "Model": "488 GTB Coupe",
-        "Vin": 1234566878670
+        "Model": "488 GTB Csoupe",
+        "Vin": "1234566878670"
     },
     {
         "Make": "MAZDA",
         "Model": "323 Hatchback",
-        "Vin": 123462456476567
+        "Vin": "123462456476567"
     }
 ]

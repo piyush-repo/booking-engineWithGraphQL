@@ -32,7 +32,7 @@ const vechileInputType = new GraphQLInputObjectType({
     fields: {
         Make: { type: GraphQLString },
         Model: { type: GraphQLString },
-        Vin: { type: GraphQLInt }
+        Vin: { type: GraphQLString }
     }
 });
 
@@ -52,22 +52,34 @@ const createBookingType = new GraphQLInputObjectType({
     }
 })
 
-function validateBookingDate(records) {
+function validateDate(record) {
+    const bookingDate = moment(record.bookingDate);
+    const currentDateOpenTime = `${bookingDate.format('YYYY-MM-DD')} ${constants.store.openTime}`;
+    const currentDateCloseTime = `${bookingDate.format('YYYY-MM-DD')} ${constants.store.closeTime}`;
+    return bookingDate.isBetween(currentDateOpenTime, currentDateCloseTime);
+}
+
+function validateBooking(records) {
     let isValid = true;
+    let errMsg = '';
     if (records.length) {
-        records.forEach((record) => {
-            const bookingDate = moment(record.bookingDate);
-            const currentDateOpenTime = `${bookingDate.format('YYYY-MM-DD')} ${constants.store.openTime}`;
-            const currentDateCloseTime = `${bookingDate.format('YYYY-MM-DD')} ${constants.store.closeTime}`;
-            if (!bookingDate.isBetween(currentDateOpenTime, currentDateCloseTime)) {
+        for (let i = 0; i < records.length; i++) {
+            if (records[i].vechile.Vin.length !== 17) {
                 isValid = false;
+                errMsg = 'Unable to book as vechile Vin is invalid';
+                break;
             }
-            else {
-                isValid = true;
+            if (!validateDate(records[i])) {
+                isValid = validateDate(records[i]);
+                errMsg = `Unable to book as allowed booking time is ${constants.store.openTime}AM to ${constants.store.closeTime}PM`;
+                break;
             }
-        })
+        }
     }
-    return isValid;
+    return {
+        isValid,
+        errMsg
+    };
 }
 
 module.exports = new GraphQLObjectType({
@@ -85,10 +97,11 @@ module.exports = new GraphQLObjectType({
                     return new GraphQLError("Please provide booking details");
                 }
                 if (args.input.length && args.input.length > constants.bookingCapacity) {
-                    return new GraphQLError("Maximum allowed booking capacity is 2")
+                    return new GraphQLError("Maximum allowed booking capacity is 2");
                 }
-                if (!validateBookingDate(args.input)) {
-                    return new GraphQLError(`Unable to book as allowed booking time is ${constants.store.openTime}AM to ${constants.store.closeTime}PM`);
+                const validObj = validateBooking(args.input);
+                if (!validObj.isValid) {
+                    return new GraphQLError(validObj.errMsg);
                 }
                 const response = [];
                 args.input.forEach(record => {

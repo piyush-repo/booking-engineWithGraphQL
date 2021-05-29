@@ -48,7 +48,7 @@ module.exports = new GraphQLObjectType({
                 let result = global.mockData.mockBooking;
                 if (args.Vin) {
                     result = result.filter((booking) => {
-                        return booking.vin === parseInt(args.Vin)
+                        return booking.vin === args.Vin
                     })
                 }
                 if (args.bookingDate) {
