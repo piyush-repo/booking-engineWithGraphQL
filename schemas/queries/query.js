@@ -33,7 +33,7 @@ module.exports = new GraphQLObjectType({
             args: { Vin: { type: new GraphQLList(GraphQLID) } },
             resolve: (parent, args) => {
                 console.log(args.Vin);
-                if(args.Vin){
+                if (args.Vin) {
                     return global.mockData.mockVechile.filter((vechile) => {
                         return args.Vin.indexOf(vechile.Vin.toString()) > -1;
                     });
@@ -48,7 +48,7 @@ module.exports = new GraphQLObjectType({
                 let result = global.mockData.mockBooking;
                 if (args.Vin) {
                     result = result.filter((booking) => {
-                        return booking.vin === args.Vin
+                        return booking.vin === args.Vin;
                     })
                 }
                 if (args.bookingDate) {
