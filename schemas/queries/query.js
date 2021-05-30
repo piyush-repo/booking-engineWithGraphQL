@@ -12,6 +12,7 @@ const {
 const customerType = require('../customer');
 const vechileType = require('../vechile');
 const bookingType = require('../booking');
+const resolvers = require('../resolvers/index');
 const _ = require('lodash');
 const moment = require('moment');
 
@@ -23,9 +24,9 @@ module.exports = new GraphQLObjectType({
             args: { Ids: { type: new GraphQLList(GraphQLID) } },
             resolve: (parent, args) => {
                 if (args.Ids) {
-                    return _.filter(global.mockData.mockCustomer, (customer) => args.Ids.indexOf(customer.id.toString()) > -1);
+                    return resolvers.customer.getCustomersById(args.Ids);
                 }
-                return global.mockData.mockCustomer;
+                return resolvers.customer.getAllCustomers();
             }
         },
         Vechile: {
@@ -34,11 +35,9 @@ module.exports = new GraphQLObjectType({
             resolve: (parent, args) => {
                 console.log(args.Vin);
                 if (args.Vin) {
-                    return global.mockData.mockVechile.filter((vechile) => {
-                        return args.Vin.indexOf(vechile.Vin.toString()) > -1;
-                    });
+                    return resolvers.vechile.getVechilesByVin(args.Vin);
                 }
-                return global.mockData.mockVechile;
+                return resolvers.vechile.getAllVechiles();
             }
         },
         Booking: {
@@ -49,7 +48,7 @@ module.exports = new GraphQLObjectType({
                 if (args.Vin) {
                     result = result.filter((booking) => {
                         return booking.vin === args.Vin;
-                    })
+                    });
                 }
                 if (args.bookingDate) {
                     result = result.filter((booking) => {

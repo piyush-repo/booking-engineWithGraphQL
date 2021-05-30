@@ -9,7 +9,7 @@ const {
 module.exports = new GraphQLObjectType({
     name: "Customer",
     fields: {
-        id: { type: GraphQLID },
+        Id: { type: GraphQLID },
         CustomerName: { type: GraphQLString },
         CustomerEmail: { type: GraphQLString},
         CustomerPhoneNumber: { type: GraphQLInt}

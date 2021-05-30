@@ -14,7 +14,6 @@ const moment = require('moment');
 const constants = require('../../config/constants.json');
 const bookingType = require('../booking');
 const _ = require('lodash');
-const { constant } = require('lodash');
 const { v4: uuidv4 } = require('uuid');
 
 const customerInputType = new GraphQLInputObjectType({
