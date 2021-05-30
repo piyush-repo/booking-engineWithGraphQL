@@ -113,7 +113,7 @@ mutation {
 
 As of now we have seeded some mock data for customer, vechile and booking. Please refer mockData folder for more details.
 
-#### Running app in an container.
+#### Running app in a container.
 
 Make sure you have installed docker on your machine. Then follow the below steps to run the containerized version.
 
@@ -128,7 +128,7 @@ docker build -t booking-engine .
 ````
 docker run -d -p 3000:3000 booking-engine
 
-Run in dettach mode.
+Run in detach mode.
 `````
 
 Open a browser and paste http://localhost:3000/graphql
